@@ -32,7 +32,7 @@
                             <p:menuitem value="Remove" action="removePage" ajax="false" class="home" icon="ui-icon-trash" />
                             <p:menuitem value="Find Record" action="searchPage" ajax="false" class="home" icon="ui-icon-zoomin" />
                             <p:menuitem value="Show Records" action="recordsPage" ajax="false" class="home" icon="ui-icon-collapsed" />
-                            <p:menuitem value="Gallery" action ="Gallery" class="home" ajax='false' icon="fa-image" />
+                            <p:menuitem value="Gallery" action ="Gallery" class="home" ajax='false' icon="ui-icon-image" />
 
                         </p:submenu>
 
@@ -51,7 +51,7 @@
                         <h:outputLabel value="ID Number"/>                
                         <h:inputText value="#{customerController.idSearch}"/> 
 
-                        <p:commandButton value="Fetch" action ="#{customerController.findCustomer()}" ajax="false"/>
+                        <p:commandButton value="Fetch" action ="#{customerController.findCustomer()}" ajax="false" icon="ui-icon-search"/>
 
                         <h:form id="f2">
                             <h:panelGrid id="p2" columns="2" bgcolor="#E9967A">
@@ -93,8 +93,8 @@
                                 <p:inputText id="email" value="#{customerController.email}"/>
 
 
-                                <p:commandButton value="update" action ="#{customerController.update}" onsuccess="alert('Customer updated')"  /> 
-                                <p:commandButton value="Reset" action ="#{customerController.reset()}"  update ="p2" resetValues="true" /> 
+                                <p:commandButton value="update" action ="#{customerController.update}" onsuccess="alert('Customer updated')" icon = "ui-icon-person" /> 
+                                <p:commandButton value="Reset" action ="#{customerController.reset()}"  update ="p2" resetValues="true" icon ="ui-icon-arrowrefresh-1-n" /> 
                             </h:panelGrid>                 
 
                         </h:form>

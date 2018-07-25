@@ -31,7 +31,7 @@
                             <p:menuitem value="Remove" action="removePage" ajax="false" class="home" icon="ui-icon-trash" />
                             <p:menuitem value="Find Record" action="searchPage" ajax="false" class="home" icon="ui-icon-zoomin" />
                             <p:menuitem value="Show Records" action="recordsPage" ajax="false" class="home" icon="ui-icon-collapsed" />
-                            <p:menuitem value="Gallery" action ="Gallery" class="home" ajax='false' icon="ui-icon-home" />
+                            <p:menuitem value="Gallery" action ="Gallery" class="home" ajax='false' icon="ui-icon-image" />
 
                         </p:submenu>
 
@@ -53,7 +53,7 @@
                         <h:inputText value="#{customerController.idSearch}"/> 
 
 
-                        <p:commandButton value="Fetch" action ="#{customerController.fetch()}" ajax="false"/>
+                        <p:commandButton value="Fetch" action ="#{customerController.fetch()}" ajax="false" icon="ui-icon-search"/>
 
 
                         <p:dataTable value="#{customerController.cs}" var="cust1">

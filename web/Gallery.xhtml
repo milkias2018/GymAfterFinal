@@ -18,7 +18,7 @@
 
             <p:layoutUnit position="south" size="180" id="bannerimage1" ></p:layoutUnit> 
             <p:layoutUnit position="east" size="600">
-                <p:gmap center="59.310917, 18.029758" zoom="15" type="HYBRID" style="width:100%;height:400px" />
+                <p:gmap center="59.310917, 18.029758" zoom="15" type="HYBRID" style="width:100%;height:600px" />
                  
             </p:layoutUnit>
 
@@ -34,7 +34,7 @@
                             <p:menuitem value="Remove" action="removePage" ajax="false" class="home" icon="ui-icon-trash" />
                             <p:menuitem value="Find Record" action="searchPage" ajax="false" class="home" icon="ui-icon-zoomin" />
                             <p:menuitem value="Show Records" action="recordsPage" ajax="false" class="home" icon="ui-icon-collapsed" />
-                            <p:menuitem value="Gallery" action ="Gallery" class="home" ajax='false' icon="ui-icon-home" />
+                            <p:menuitem value="Gallery" action ="Gallery" class="home" ajax='false' icon="ui-icon-image" />
 
                         </p:submenu>
 
@@ -45,7 +45,7 @@
             </p:layoutUnit> 
 
             <p:layoutUnit position="center" size="500">
-
+  <p:panel  header="Gallery" collapsed="true" style="margin-bottom:20px"></p:panel>
                 <p:contentFlow value="#{imagesView.images}" var="image">
                     <p:graphicImage name="img/pics/#{image}" styleClass="content" />
                     <div class="caption">#{image}</div>

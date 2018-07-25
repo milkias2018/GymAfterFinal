@@ -21,37 +21,39 @@
             <p:layoutUnit position="east" resizable="true"></p:layoutUnit> 
 
             <p:layoutUnit position="west" size="300" > 
+
                 <h:form>
 
                     <p:panelMenu style="width:300px">
-                       <p:submenu label="Menu">
+                        <p:submenu label="Menu">
                             <p:menuitem value="Home" action ="homePage" class="home" ajax='false' icon="ui-icon-home" />
                             <p:menuitem value="Register" action="registrationPage" ajax="false" class="home" icon="ui-icon-disk" />
                             <p:menuitem value="Update" action="updatePage" ajax="false" class="home" icon="ui-icon-person" />
                             <p:menuitem value="Remove" action="removePage" ajax="false" class="home" icon="ui-icon-trash" />
                             <p:menuitem value="Find Record" action="searchPage" ajax="false" class="home" icon="ui-icon-zoomin" />
                             <p:menuitem value="Show Records" action="recordsPage" ajax="false" class="home" icon="ui-icon-collapsed" />
-                            <p:menuitem value="Gallery" action ="Gallery" class="home" ajax='false' icon="ui-icon-home" />
+                            <p:menuitem value="Gallery" action ="Gallery" class="home" ajax='false' icon="ui-icon-image" />
 
                         </p:submenu>
 
                         <p:separator />
-                        
+
                     </p:panelMenu>
                 </h:form>
             </p:layoutUnit> 
 
             <p:layoutUnit position="center">
 
+               
 
-
-                <h:form>
+                <h:form id="p1">
                     <p:panel  header="Display Records" collapsed="true" style="margin-bottom:20px"></p:panel>               
-                    <h:panelGrid columns="2" >                                
+                    
+                    <h:panelGrid  columns="2" >                                
 
 
 
-                        <p:dataTable value="#{customerController.allCustomers}" var="c">
+                        <p:dataTable   value="#{customerController.allCustomers}" var="c">
                             <p:column headerText="Id">#{c.id}</p:column>
                             <p:column headerText="Personal number">#{c.personalNumber}</p:column>
                             <p:column headerText="First name">#{c.firstName}</p:column>
@@ -70,16 +72,9 @@
 
 
 
-                <h:form>
-                    <h:outputLabel>
-
-
-                    </h:outputLabel>
-
-
-
-
-                </h:form>
+               <p:commandButton value="Print" type="button" icon="ui-icon-print" >
+                    <p:printer target="p1" />
+                </p:commandButton>
                 <br />
             </p:layoutUnit> 
 
