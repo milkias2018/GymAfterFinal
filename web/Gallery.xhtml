@@ -13,13 +13,13 @@
 
     </h:head>
     <h:body>
-        <p:layout fullPage="true"  >
+        <p:layout fullPage="true" >
             <p:layoutUnit position="north" size="200"  id="bannerimage"  ></p:layoutUnit> 
 
             <p:layoutUnit position="south" size="180" id="bannerimage1" ></p:layoutUnit> 
             <p:layoutUnit position="east" size="600">
                 <p:gmap center="59.310917, 18.029758" zoom="15" type="HYBRID" style="width:100%;height:600px" />
-                 
+
             </p:layoutUnit>
 
 
@@ -39,26 +39,34 @@
                         </p:submenu>
 
                         <p:separator />
+                        <p:submenu label="External Links">
+                            <p:menuitem value="Facebook" url="https://www.facebook.com/lexiconab/" target="_blank" icon="ui-icon-tag" />
+                            <p:menuitem value="Twitter" url="https://www.twitter.com" target="_blank" icon="ui-icon-signal-diag" />
+                            <p:menuitem value="Github" url="https://github.com/milkias2018" target="_blank" icon="ui-icon-document" />
+                            <p:menuitem value="Instagram" url="https://www.instagram.com" target="_blank" icon="ui-icon-pin-w" />
+
+
+                        </p:submenu>
 
                     </p:panelMenu>
                 </h:form>
             </p:layoutUnit> 
 
             <p:layoutUnit position="center" size="500">
-  <p:panel  header="Gallery" collapsed="true" style="margin-bottom:20px"></p:panel>
+                <p:panel  header="Gallery" collapsed="true" style="margin-bottom:20px"></p:panel>
                 <p:contentFlow value="#{imagesView.images}" var="image">
                     <p:graphicImage name="img/pics/#{image}" styleClass="content" />
                     <div class="caption">#{image}</div>
                 </p:contentFlow>
-                
-               
+
+
 
             </p:layoutUnit> 
 
         </p:layout>
 
 
-<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript" ></script>
+        <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript" ></script>
     </h:body>
 </html>
 

@@ -37,21 +37,29 @@
                         </p:submenu>
 
                         <p:separator />
+                        <p:submenu label="External Links">
+                            <p:menuitem value="Facebook" url="https://www.facebook.com/lexiconab/" target="_blank" icon="ui-icon-tag" />
+                            <p:menuitem value="Twitter" url="https://www.twitter.com" target="_blank" icon="ui-icon-signal-diag" />
+                            <p:menuitem value="Github" url="https://github.com/milkias2018" target="_blank" icon="ui-icon-document" />
+                            <p:menuitem value="Instagram" url="https://www.instagram.com" target="_blank" icon="ui-icon-pin-w" />
+                            
+
+                        </p:submenu>
 
                     </p:panelMenu>
                 </h:form>
             </p:layoutUnit> 
 
-            <p:layoutUnit position="center">
+            <p:layoutUnit position="center" >
 
-                <h:form>
-                    <p:panel  header="Find a Record" collapsed="true" style="margin-bottom:20px"></p:panel>               
+                <h:form >
+                    <p:panel  header="Find a Record" collapsed="true" style="margin-bottom:20px" ></p:panel>               
                     <h:panelGrid id="panel" columns="1"  >                                
 
                         <h:outputLabel value="ID Number"/>                
                         <h:inputText value="#{customerController.idSearch}"/> 
 
-                        <p:commandButton value="Fetch" action ="#{customerController.findCustomer()}" ajax="false" icon="ui-icon-search"/>
+                        <p:commandButton value="Fetch" action ="#{customerController.findCustomer()}" ajax="false" icon="ui-icon-search" />
 
                         <h:form id="f2">
                             <h:panelGrid id="p2" columns="2" bgcolor="#E9967A">
